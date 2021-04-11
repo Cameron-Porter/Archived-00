@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -71,17 +71,11 @@
       That may help some people who struggle in school, yet excel at practical applications.
       Give it a shot and you won't regret it! (Copes, 2018)</p>
   </section>
-  <div id="audio" class="cent">
-    <p>Welcome!</p>
-    <audio preload="auto" controls autoplay>
-      <source src="final_audio.mp4" type="audio/mp4">
-      Your browser doesn't support HTML5 audio.
-    </audio><br><br>
-  </div>
-    <div style="width:67%; height:50vh; margin-left:auto; margin-right:auto;">
+  
+  <div style="width:67%; height:50vh; margin-left:auto; margin-right:auto;">
       <h3>References:</h3>
       <p>Copes, F. (2018, July 22). 8 good reasons to become a software developer. Retrieved May 28, 2020, from https://flaviocopes.com/good-reasons-become-software-developer/</p>
       <p>What is software development? (n.d.). Retrieved May 28, 2020, from https://www.ibm.com/topics/software-development</p>
-    </div>
+  </div>
 </body>
 </html>
