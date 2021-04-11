@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="PorterCameronStylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Table comparing different related careers.">
+  <meta name="keywords" content="Table, Career Comparison, Education, Pay, Self Employment">
+  <meta name="author" content="Cameron Porter">
+  <title>Career Comparisons</title>
+</head>
+<body>
+  <!-- Cube Navigation -->
+  <nav class="box">
+    <div class="box-inner">
+      <div class="side1">
+          <div class="menu" style="margin-top:20px;"></div>
+          <div class="menu"></div>
+          <div class="menu"></div>
+      </div>
+
+      <div class="side2 hero-img3">
+        <div class="hero-text">
+          <a href="form.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="side3 hero-img1">
+        <div class="hero-text">
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+      <div class="side4 hero-img4">
+        <div class="hero-text">
+          <a href="CameronPorterHomePage.html">Home</a>
+      </div>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Picture at the top of the page -->
+  <div class="banner">
+    <img src="banner3.png" style="height: 200px; width: 85%;" alt="Abstract facial profile">
+  </div>
+  <!-- Div to contain main section -->
+  <div class="pos">
+  <h1>Comparison of similar careers:</h1>
+  <!-- Below is table with JS -->
+  <table style="margin: 0 auto 0 auto;"  onmouseover="document.getElementById('monster').style.visibility='visible'" onmouseout="document.getElementById('monster').style.visibility='hidden'">
+    <caption>IT Careers</caption>
+    <tr>
+      <th>Careers</th>
+      <th>Education Required</th>
+      <th>Avg Pay</th>
+      <th>Self Employable?</th>
+    </tr>
+    <tr>
+      <th>Software Engineer:</th>
+      <td>BS</td>
+      <td>$105k</td>
+      <td>Likely</td>
+    </tr>
+    <tr>
+      <th>Web Developer:</th>
+      <td>AS, but experience will satisfy</td>
+      <td>$70K</td>
+      <td>Highly Likely</td>
+    </tr>
+    <tr>
+      <th>Data Scientist:</th>
+      <td>MS</td>
+      <td>$118K</td>
+      <td>Unlikely</td>
+    </tr>
+  </table>
+  <!-- Double Divs for a sprite and it's container -->
+  <div id="extra">
+  <div id="monster">
+  </div>
+  </div>
+  <div>
+    <h3>Reference:</h3>
+    <p>Software Developers : Occupational Outlook Handbook. (2019, September 04). Retrieved May 27, 2020, from https://www.bls.gov/ooh/Computer-and-Information-Technology/Software-developers.htm</p>
+  </div>
+</div>
+</body>
+</html>
