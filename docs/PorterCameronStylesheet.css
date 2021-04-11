@@ -113,7 +113,7 @@ body {
 
 /********* IMAGES FOR MENU SIDES *********/
 .hero-img1{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("code.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/code.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,7 +121,7 @@ body {
   position: relative;
 }
 .hero-img2{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("table.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/table.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +129,7 @@ body {
   position: relative;
 }
 .hero-img3{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("contact.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/contact.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,7 +137,7 @@ body {
   position: relative;
 }
 .hero-img4{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/1.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -267,7 +267,7 @@ a:link, a:visited{
 #monster {
   width: 447px;
   height:510px;
-  background:url('monster.png');
+  background:url('images/monster.png');
   animation: play .8s steps(26) infinite;
   visibility: hidden;
 }
