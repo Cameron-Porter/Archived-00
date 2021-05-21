@@ -10,54 +10,59 @@
   <title>Software Engineering</title>
 </head>
 <body>
-  <!-- Cube Navigation -->
-  <nav class="box">
-    <div class="box-inner">
-      <div class="side1">
-          <div class="menu" style="margin-top:20px;"></div>
-          <div class="menu"></div>
-          <div class="menu"></div>
-      </div>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <div class="side2 hero-img3">
-        <div class="hero-text">
-          <a href="form.html" target="_blank">Contact</a>
-        </div>
-      </div>
-
-      <div class="side3 hero-img2">
-        <div class="hero-text">
-          <a href="table.html" target="_blank">Table</a>
-        </div>
-      </div>
-
-      <div class="side4 hero-img1">
-        <div class="hero-text">
-          <a href="about.html" target="_blank">About</a>
-      </div>
-      </div>
-
-    </div>
-  </nav>
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="index.html" class="active">CRP</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="about.html">About</a>
+    <a href="table.html">Table</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+  <script>
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+  </script>
   <!-- Section about career -->
-  <section id="main-section" class="ms">
-    <h1 style="color:white; font-size:45px;">Cameron Porter</h1>
-    <h2 style="color:white;">My journey from Military to Developer</h2>
-  </section>
+  
+  <div id="main-section" style="position:relative; text-align: center;">
+    <img src="images/java.jpg" style="height: 70%; width: 103%; opacity: 85%;" alt="A table with a laptop and coffee.">
+    <div class="name">
+      <h1 style="color:black; font-size:200%;">Cameron Porter</h1>
+    </div>
+    <div class="sub">
+      <h2 style="color:black; font-size: 150%;">My journey from Military to Developer</h2>
+    </div>
+  </div>
+  <div id="main-section">
   <section class="cent">
-    <img src="images/code.jpg" style="float:right; width:300px; height:200px;" alt="Various Software Code">
-    <h2 style="margin-top:70px;">Who am I:</h2>
+    <img src="images/code.jpg" style="float:right; width:40%; height:25%; margin-top: 5%;" alt="Various Software Code">
+    <h2 style="margin-top:5%;">Who am I:</h2>
     <p>I'm a husband, father, and forever student. I just finished my Bachelor of Science in I.T. with a concentration in JAVA and Python programming. 
     I've exposed myself to many facets of the IT industry. From responsive web design and pygames, to offensive security and penetration testing. 
     Everything I have had a chance to learn has been an absolutely joy. This June I will be transitioning out of the military and am actively looking 
     for a remote career. In the mean time I am continuing my personal education. I will be taking a prepatory course for the CompTIA Security+ starting 
-    April 16th, I will also be starting my Master of Science in Cybersecurity this May. I believe that the better I become at development, the better 
+    April 16th, I will also be starting my Master of Science in Cybersecurity this June. I believe that the better I become at development, the better 
     I will be long term with security.</p>
   </section>
   <!-- Section about why you should get into this field-->
-  <section style="width:67%; height:50vh; margin-left:auto; margin-right:auto;">
-    <img src="images/skills.jpg" style="float:right; width:300px; height:200px;" alt="Virtual Thought Board">
-    <h2>Fun Projects:</h2>
+  <section style="width:67%; margin-left:auto; margin-right:auto;">
+    <img src="images/skills.jpg" style="float:right; width:40%; height:38%; margin-top: 2%;" alt="Virtual Thought Board">
+    <h2 style="margin-top: 2%;">Fun Projects:</h2>
     <p>The first thing I started working on when learning to code was a text based dungeon game. I found this to be a great way to work 
     on loops, and it also allowed me to slowly create more complex games. I later followed a tutorial to create a Space Invader game commonly known as 
     SHMUP (shoot'em up). This helped to solidify OOP concepts and gave me a better understanding of how to properly use objects. Moving forward, 
@@ -65,7 +70,7 @@
     text file maze to find the shortest/fastest path from start to finish. After completing these, I ventured to TryHackMe.com and begain completing their 
     'rooms'. Through these rooms I learning about Linux CLI, Hashing, NMAP, Metasploit, Burp Suite, Open Source Intelligence, etc.</p>
   </section>
- 
+  </div>
 
 </body>
 </html>
