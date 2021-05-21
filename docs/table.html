@@ -9,44 +9,43 @@
   <title>Careers</title>
 </head>
 <body>
-  <!-- Cube Navigation -->
-  <nav class="box">
-    <div class="box-inner">
-      <div class="side1">
-          <div class="menu" style="margin-top:20px;"></div>
-          <div class="menu"></div>
-          <div class="menu"></div>
-      </div>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <div class="side2 hero-img3">
-        <div class="hero-text">
-          <a href="form.html">Contact</a>
-        </div>
-      </div>
-
-      <div class="side3 hero-img1">
-        <div class="hero-text">
-          <a href="about.html">About</a>
-        </div>
-      </div>
-
-      <div class="side4 hero-img4">
-        <div class="hero-text">
-          <a href="index.html">Home</a>
-      </div>
-      </div>
-
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="index.html" class="active">CRP</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="about.html">About</a>
+      <a href="table.html">Table</a>
     </div>
-  </nav>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+    <script>
+      /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+    </script>
+
   <!-- Picture at the top of the page -->
-  <div class="banner">
-    <img src="images/banner3.png" style="height: 200px; width: 85%;" alt="Abstract facial profile">
+  <div id="main-section" style="position:relative; text-align: center;">
+    <img src="images/java.jpg" style="height: 70%; width: 103%; opacity: 85%;" alt="A table with a laptop and coffee.">
   </div>
   <!-- Div to contain main section -->
-  <div class="pos">
+  <div id="main-section">
   <h1>Some careers that caught my eye:</h1>
   <!-- Below is table with JS -->
-  <table style="margin: 0 auto 0 auto;"  onmouseover="document.getElementById('monster').style.visibility='visible'" onmouseout="document.getElementById('monster').style.visibility='hidden'">
+  <table style="margin: 0 auto 5% auto;">
     <caption>IT Careers</caption>
     <tr>
       <th>Position</th>
