@@ -9,41 +9,40 @@
   <title>About the Profession</title>
 </head>
 <body>
-  <!-- Cube Navigation -->
-  <nav class="box">
-    <div class="box-inner">
-      <div class="side1">
-          <div class="menu" style="margin-top:20px;"></div>
-          <div class="menu"></div>
-          <div class="menu"></div>
-      </div>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <div class="side2 hero-img3">
-        <div class="hero-text">
-          <a href="form.html">Contact</a>
-        </div>
-      </div>
-
-      <div class="side3 hero-img2">
-        <div class="hero-text">
-          <a href="table.html">Table</a>
-        </div>
-      </div>
-
-      <div class="side4 hero-img4">
-        <div class="hero-text">
-          <a href="index.html">Home</a>
-      </div>
-      </div>
-
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="index.html" class="active">CRP</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="about.html">About</a>
+      <a href="table.html">Table</a>
     </div>
-  </nav>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+    <script>
+      /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+    </script>
+    
   <!-- Picture at the top of the page -->
-  <div class="banner">
-    <img src="images/banner2.jpg" style="height: 200px; width: 85%;" alt="Various Code in Blue">
+  <div id="main-section" style="position:relative; text-align: center;">
+    <img src="images/java.jpg" style="height: 70%; width: 103%; opacity: 85%;" alt="A table with a laptop and coffee.">
   </div>
   <!-- Div to contain main section -->
-  <div class="pos">
+  <div id="main-section">
   <h1>About Me</h1>
     <h2>Job:</h2>
       <p style="text-indent:15px">
@@ -52,7 +51,7 @@
     <h2>Education:</h2>
       <p style="text-indent:15px">
           I have recently completed my Bachelor of Science in Information Technology with a concentration in Programming with American Military University (AMU). All major 
-        and concentration courses were passed with A's and I achieved an overall GPA of 3.93 on a 4.0 scale. I am currently enrolled in AMU's Master of Science in Cybersecurity program. This program will begin in May 2021.
+        and concentration courses were passed with A's and I achieved an overall GPA of 3.93 on a 4.0 scale. I am currently enrolled in AMU's Master of Science in Cybersecurity program. This program will begin in June 2021.
       </p><hr>
     <h2>Hobies:</h2>
       <p style="text-indent:15px">
@@ -60,7 +59,7 @@
       </p><hr>
     <h2>Future:</h2>
       <p style="text-indent:15px">
-          I hope to use the next few years to further develop my own skills and become competant/proficient at coding. Not just the coding but also the methodologies and how teams efficiently work together. Once I have experience in most of that, I wish to turn around and be a mentor to other breaking into the field. There are plenty of resources out there for people to learn, yet sometimes what people really need is a champion to help guide and encourage them. I wish to be that champion and to push opthers to become greater than myself.
+          I hope to use the next few years to further develop my own skills and become competant/proficient at coding. Not just the coding but also the methodologies and how teams efficiently work together. Once I have experience in most of that, I wish to turn around and be a mentor to others breaking into the field. There are plenty of resources out there for people to learn, yet sometimes what people really need is a champion to help guide and encourage them. I wish to be that champion and to push others to become greater than myself.
       </p><hr><br><br>
 </div>
 </body>
