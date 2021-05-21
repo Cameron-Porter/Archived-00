@@ -37,6 +37,10 @@ body {
   bottom: 20%;
 }
 
+h2 {
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
 /********* NAVIGATION *********/
 
 /* Style the navigation menu */
