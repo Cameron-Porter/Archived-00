@@ -89,26 +89,6 @@ h2 {
   background-color: gray;
   color: white;
 }
-  
-#main-section {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1% 0 1%;
-}
-
-#bkgrd {
-  background-color: white;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 5%;
-}
 }
 
 /* For everything else */
