@@ -44,7 +44,7 @@ h2 {
 /********* NAVIGATION *********/
 
 /* For mobile phones */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
 /* Style the navigation menu */
   .topnav {
   overflow: hidden;
@@ -89,9 +89,10 @@ h2 {
   background-color: gray;
   color: white;
 }
+  
   .pos {
   position: inherit;
-  width: 80%;
+  width: 100%;
   padding: 100px 15px 100px 15px;
   background: white;
 }
