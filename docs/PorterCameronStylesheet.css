@@ -90,7 +90,6 @@ h2 {
 }
 }
 
-@media only screen and (min-device-width: 481px){
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
@@ -132,7 +131,7 @@ h2 {
   background-color: gray;
   color: white;
 }
-}
+
 
 /********* Page Positions *********/
 .pos {
