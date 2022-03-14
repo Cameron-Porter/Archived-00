@@ -1,0 +1,94 @@
+/**************************** 
+Navigation
+ ****************************/
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: lightgray;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navLink {
+  padding: 15px;
+  border-radius: 15%;
+  color: black;
+  text-decoration: none;
+}
+.navLink:hover {
+  color: greenyellow;
+}
+
+.logo {
+  flex: 50%;
+  background-image: url(images/bbBlack.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0.5rem;
+  height: 59px;
+}
+
+/**************************** 
+About Me
+ ****************************/
+
+#About {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 85vh;
+  padding: 15px;
+}
+
+.aboutMeLeft {
+  display: flex;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.headshot {
+  border-radius: 50%;
+  background-color: white;
+  width: 20rem;
+  height: 20rem;
+  background-image: url(images/headshot.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  box-shadow: -10px 10px 30px black;
+  -moz-box-shadow: -10px 10px 30px black;
+  -webkit-box-shadow: -10px 10px 30px black;
+}
+
+.aboutMeRight {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  justify-content: center;
+}
+
+/**************************** 
+Technologies
+ ****************************/
+
+#Technologies {
+  background-color: white;
+}
+
+.techTitle {
+  background-color: white;
+}
+
+.techIcons {
+  margin: 8rem;
+}
