@@ -1,94 +1,183 @@
-/**************************** 
-Navigation
- ****************************/
+:root {
+  font-size: 16px;
+}
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  background-color: lightgray;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/***********************************
+   -------- Reset & Body --------
+***********************************/
+
+body {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+}
+
+/***********************************
+-------- Mobile Navigation --------
+***********************************/
+
+.menu-open {
+  display: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  margin-left: 25px/2;
+  margin-top: 3px/2;
+  transition: transform 200ms;
+}
+
+.hamburger-1 {
+  transform: translate3d(0, -8px, 0);
+}
+.hamburger-2 {
+  transform: translate3d(0, 0, 0);
+}
+.hamburger-3 {
+  transform: translate3d(0, 8px, 0);
+}
+
+/*
+.menu-open:checked + .menu-open-button {
+  .hamburger-1 {
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  .hamburger-2 {
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+  }
+  .hamburger-3 {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+  }
+}*/
+
+/***********************************
+-------- Desktop Navigation --------
+***********************************/
+
+.navMenu {
+  position: fixed;
+  top: 0;
+  background-color: rgba(27, 120, 163, 0.5);
   width: 100%;
-}
-
-.nav {
-  display: flex;
-  flex: 50%;
+  display: inline-block;
+  padding: 15px 34%;
   align-items: center;
-  justify-content: space-evenly;
 }
 
-.navLink {
-  padding: 15px;
-  border-radius: 15%;
+.navMenu a {
   color: black;
+  margin-left: 20px;
+  margin-right: 20px;
   text-decoration: none;
-}
-.navLink:hover {
-  color: greenyellow;
-}
-
-.logo {
-  flex: 50%;
-  background-image: url(images/bbBlack.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 0.5rem;
-  height: 59px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 150px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-/**************************** 
-About Me
- ****************************/
-
-#About {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 85vh;
-  padding: 15px;
+.navMenu a:hover {
+  color: aqua;
 }
 
-.aboutMeLeft {
-  display: flex;
-  flex: 50%;
-  justify-content: center;
-  align-items: center;
-}
-
-.headshot {
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: aqua;
   border-radius: 50%;
-  background-color: white;
-  width: 20rem;
-  height: 20rem;
-  background-image: url(images/headshot.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative;
-  box-shadow: -10px 10px 30px black;
-  -moz-box-shadow: -10px 10px 30px black;
-  -webkit-box-shadow: -10px 10px 30px black;
+  opacity: 0;
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.aboutMeRight {
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(46px);
+  transform: translateX(46px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(151px);
+  transform: translateX(151px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(261px);
+  transform: translateX(261px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(382px);
+  transform: translateX(382px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+/***********************************
+       -------- Body --------
+***********************************/
+
+.gacha {
+  margin-top: 2.5%;
+  background-image: url(images/gacha-splash.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+/***********************************
+-------- Connection Columns --------
+***********************************/
+
+.socialIconDiv {
+  position: fixed;
+  bottom: 180px;
+  left: 40px;
   display: flex;
   flex-direction: column;
-  flex: 50%;
-  justify-content: center;
+  height: 340px;
+  align-items: center;
+  bottom: 0;
 }
-
-/**************************** 
-Technologies
- ****************************/
-
-#Technologies {
-  background-color: white;
+.socialIcons li {
+  height: 30px;
+  width: 30px;
+  margin: 20px 5px;
+  list-style: none;
 }
-
-.techTitle {
-  background-color: white;
+.socialIcons li a svg:hover {
+  stroke: aqua;
 }
-
-.techIcons {
-  margin: 8rem;
+.socialIconDiv > ul::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 120px;
+  margin-left: 20px;
+  background-color: aqua;
+  margin-bottom: 0;
+  align-self: center;
 }
