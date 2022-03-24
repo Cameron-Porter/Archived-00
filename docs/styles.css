@@ -8,18 +8,20 @@
 }
 
 /***********************************
-   -------- Reset & Body --------
+      -------- Reset --------
 ***********************************/
 
-body {
+body,
+html {
   background: #272727;
   font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 
 /***********************************
 -------- Mobile Navigation --------
 ***********************************/
-
+/*
 .menu-open {
   display: none;
 }
@@ -47,7 +49,6 @@ body {
   transform: translate3d(0, 8px, 0);
 }
 
-/*
 .menu-open:checked + .menu-open-button {
   .hamburger-1 {
     transform: translate3d(0, 0, 0) rotate(45deg);
@@ -65,26 +66,32 @@ body {
 ***********************************/
 
 .navMenu {
+  display: inline-block;
   position: fixed;
   top: 0;
-  background-color: rgba(27, 120, 163, 0.5);
   width: 100%;
-  display: inline-block;
+  height: 30px;
   padding: 15px 34%;
+  background-color: rgba(27, 120, 163, 0.5);
+  z-index: 9999;
+}
+
+.links {
+  width: 480px;
+  justify-content: center;
   align-items: center;
 }
 
-.navMenu a {
-  color: black;
-  margin-left: 20px;
-  margin-right: 20px;
+.links a {
+  color: white;
   text-decoration: none;
   font-size: 1.2em;
   text-transform: uppercase;
   font-weight: 500;
-  width: 150px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  justify-content: center;
+  margin: 0 20px;
 }
 
 .navMenu a:hover {
@@ -139,13 +146,31 @@ body {
        -------- Body --------
 ***********************************/
 
-.gacha {
-  margin-top: 2.5%;
-  background-image: url(images/gacha-splash.png);
-  background-size: contain;
+.parallax {
+  background-image: url(images/flip.jpg);
+  height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  background-attachment: fixed;
+}
+
+.intro {
+  position: relative;
+}
+
+.intro h1 {
+  padding-left: 370px;
+  padding-top: 175px;
+  transform: rotate(-12deg);
+}
+
+.intro p {
+  padding-left: 310px;
+  padding-top: 195px;
+  color: rgb(255, 255, 255);
+  transform: rotate(-19deg);
+  font-size: 18px;
 }
 
 /***********************************
@@ -154,11 +179,10 @@ body {
 
 .socialIconDiv {
   position: fixed;
-  bottom: 180px;
   left: 40px;
   display: flex;
   flex-direction: column;
-  height: 340px;
+  height: 380px;
   align-items: center;
   bottom: 0;
 }
@@ -177,6 +201,37 @@ body {
   width: 1px;
   height: 120px;
   margin-left: 20px;
+  background-color: aqua;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.myEmail {
+  position: fixed;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.myEmail a {
+  writing-mode: vertical-rl;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.myEmail a:hover {
+  color: aqua;
+  box-shadow: 0 0 20px aqua;
+}
+.myEmail::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 120px;
+  margin-left: auto;
   background-color: aqua;
   margin-bottom: 0;
   align-self: center;
