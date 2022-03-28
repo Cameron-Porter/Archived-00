@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 /***********************************
@@ -13,7 +14,7 @@
 
 body,
 html {
-  background: #272727;
+  background: rgba(8, 19, 54, 0.9);
   font-family: "Montserrat", sans-serif;
   height: 100%;
 }
@@ -21,218 +22,324 @@ html {
 /***********************************
 -------- Mobile Navigation --------
 ***********************************/
-/*
-.menu-open {
-  display: none;
-}
-
-.hamburger {
-  width: 25px;
-  height: 3px;
-  background: black;
-  display: block;
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  margin-left: 25px/2;
-  margin-top: 3px/2;
-  transition: transform 200ms;
-}
-
-.hamburger-1 {
-  transform: translate3d(0, -8px, 0);
-}
-.hamburger-2 {
-  transform: translate3d(0, 0, 0);
-}
-.hamburger-3 {
-  transform: translate3d(0, 8px, 0);
-}
-
-.menu-open:checked + .menu-open-button {
-  .hamburger-1 {
-    transform: translate3d(0, 0, 0) rotate(45deg);
+@media only screen and (max-width: 768px) {
+  /* Style the navigation menu */
+  .navMenu {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    z-index: 1;
   }
-  .hamburger-2 {
-    transform: translate3d(0, 0, 0) scale(0.1, 1);
+
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  #links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(27, 120, 163, 0.9);
+    margin-left: auto;
+    height: 100%;
+    width: 100%;
+    font-size: 5vh;
   }
-  .hamburger-3 {
-    transform: translate3d(0, 0, 0) rotate(-45deg);
+  #links > a {
+    padding: 35px;
+    margin-left: auto;
   }
-}*/
+
+  /* Style navigation menu links */
+  .navMenu > a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    margin-left: auto;
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  /* Style the hamburger menu */
+  .navMenu a.icon {
+    position: relative;
+  }
+
+  /* Add a grey background color on mouse-over */
+  .navMenu a:hover {
+    background-color: rgba(27, 120, 163, 0.5);
+    color: black;
+  }
+
+  /* Style the active link (or home/logo) */
+  .active {
+    color: white;
+  }
+}
 
 /***********************************
 -------- Desktop Navigation --------
 ***********************************/
 
-.navMenu {
-  display: inline-block;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 30px;
-  padding: 15px 34%;
-  background-color: rgba(27, 120, 163, 0.5);
-  z-index: 9999;
-}
+@media only screen and (min-width: 768px) {
+  .navMenu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    padding: 15px;
+    background-color: rgba(27, 120, 163, 0.5);
+    z-index: 1;
+  }
+  .navMenu > a {
+    display: none;
+  }
+  .links {
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+  }
 
-.links {
-  width: 480px;
-  justify-content: center;
-  align-items: center;
-}
+  .links a {
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    justify-content: center;
+    margin: 0 20px;
+  }
 
-.links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  justify-content: center;
-  margin: 0 20px;
-}
+  .navMenu a:hover {
+    color: aqua;
+  }
 
-.navMenu a:hover {
-  color: aqua;
-}
+  .navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: aqua;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
 
-.navMenu .dot {
-  width: 6px;
-  height: 6px;
-  background: aqua;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translateX(15px);
-  transform: translateX(15px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
+  .navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(46px);
+    transform: translateX(46px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
 
-.navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(46px);
-  transform: translateX(46px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
+  .navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(151px);
+    transform: translateX(151px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
 
-.navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(151px);
-  transform: translateX(151px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
+  .navMenu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(261px);
+    transform: translateX(261px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
 
-.navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(261px);
-  transform: translateX(261px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+  .navMenu a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(382px);
+    transform: translateX(382px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
 }
-
-.navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(382px);
-  transform: translateX(382px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-
 /***********************************
        -------- Body --------
 ***********************************/
 
 .parallax {
-  background-image: url(images/flip.jpg);
+  background-image: url(images/mountaintop.png);
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: Center;
+  background-attachment: fixed;
+  filter: grayscale(0);
+}
+@media only screen and (max-width: 768px) {
+  .parallax > div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 14vh;
+    padding-left: 3vh;
+    width: fit-content;
+    filter: grayscale(0);
+  }
+  .parallax > div > h1 {
+    font-size: 5vh;
+  }
+  .parallax > div > p {
+    padding: 1vh;
+    font-size: 2vh;
+    color: red;
+  }
+  .parallax > div > button {
+    background-color: white;
+    color: black;
+    filter: none;
+    padding: 1vw;
+    border: 1px solid red;
+    border-radius: 12px;
+    width: 107px;
+    font-size: 2vh;
+    align-self: center;
+  }
+
+  button:hover {
+    background-image: linear-gradient(to right bottom, red, white, blue);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .parallax > div {
+    position: relative;
+    padding-top: 13vw;
+    padding-left: 3vw;
+  }
+  .parallax > div > h1 {
+    font-size: 5vw;
+  }
+  .parallax > div > p {
+    padding: 1vw;
+    font-size: 2vw;
+  }
+}
+
+.parallax2 {
+  background-image: url(images/flip.jpg);
+  height: 70%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-
-.intro {
-  position: relative;
+.parallax3 {
+  background-image: url(images/sunrise.jpg);
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
-
-.intro h1 {
-  padding-left: 370px;
-  padding-top: 175px;
-  transform: rotate(-12deg);
+.parallax4 {
+  background-image: url(images/mountaintop.png);
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: Center;
+  background-attachment: fixed;
+  filter: grayscale(1);
 }
-
-.intro p {
-  padding-left: 310px;
-  padding-top: 195px;
-  color: rgb(255, 255, 255);
-  transform: rotate(-19deg);
-  font-size: 18px;
+.skills {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  color: black;
 }
-
+.skills > div > h2 {
+  text-align: center;
+}
+.skills p {
+  flex-direction: column;
+  align-content: center;
+  padding-top: 60px;
+}
+.skills p a {
+  padding: 60px;
+  color: #272727;
+}
+.skills p a img {
+  transition: 1s ease;
+}
+.skills p a img:hover {
+  transform: scale(1.75);
+}
 /***********************************
 -------- Connection Columns --------
 ***********************************/
+@media only screen and (min-width: 768px) {
+  .socialIconDiv {
+    position: fixed;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    align-items: center;
+    bottom: 0;
+  }
+  .socialIcons li {
+    height: 30px;
+    width: 30px;
+    margin: 20px 5px;
+    list-style: none;
+  }
+  .socialIcons li a svg:hover {
+    stroke: aqua;
+  }
+  .socialIconDiv > ul::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 120px;
+    margin-left: 20px;
+    background-color: aqua;
+    margin-bottom: 0;
+    align-self: center;
+  }
 
-.socialIconDiv {
-  position: fixed;
-  left: 40px;
-  display: flex;
-  flex-direction: column;
-  height: 380px;
-  align-items: center;
-  bottom: 0;
-}
-.socialIcons li {
-  height: 30px;
-  width: 30px;
-  margin: 20px 5px;
-  list-style: none;
-}
-.socialIcons li a svg:hover {
-  stroke: aqua;
-}
-.socialIconDiv > ul::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 120px;
-  margin-left: 20px;
-  background-color: aqua;
-  margin-bottom: 0;
-  align-self: center;
-}
-
-.myEmail {
-  position: fixed;
-  right: 40px;
-  display: flex;
-  flex-direction: column;
-  height: 320px;
-  align-items: center;
-  justify-content: space-between;
-  bottom: 0;
-}
-.myEmail a {
-  writing-mode: vertical-rl;
-  color: white;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-.myEmail a:hover {
-  color: aqua;
-  box-shadow: 0 0 20px aqua;
-}
-.myEmail::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 120px;
-  margin-left: auto;
-  background-color: aqua;
-  margin-bottom: 0;
-  align-self: center;
+  .myEmail {
+    position: fixed;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+  }
+  .myEmail a {
+    writing-mode: vertical-rl;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: 0.7s ease;
+  }
+  .myEmail a:hover {
+    color: aqua;
+    transform: scale(1.2);
+  }
+  .myEmail::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 120px;
+    margin-left: auto;
+    background-color: aqua;
+    margin-bottom: 0;
+    align-self: center;
+  }
 }
