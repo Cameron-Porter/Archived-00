@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  color: white;
+  color: whitesmoke;
 }
 
 /***********************************
@@ -14,9 +14,15 @@
 
 body,
 html {
-  background: rgba(8, 19, 54, 0.9);
+  background-color: #f1f1f1;
   font-family: "Montserrat", sans-serif;
   height: 100%;
+}
+h1,
+h2,
+h3,
+p {
+  color: black;
 }
 
 /***********************************
@@ -192,6 +198,7 @@ html {
   }
   .parallax > div > h1 {
     font-size: 5vh;
+    color: white;
   }
   .parallax > div > p {
     padding: 1vh;
@@ -210,25 +217,114 @@ html {
     align-self: center;
   }
 
-  button:hover {
-    background-image: linear-gradient(to right bottom, red, white, blue);
+  .parallax > div > button:hover {
+    background-color: navy;
+    color: white;
+  }
+  .intro {
+    display: block;
+    padding: 25px;
+  }
+  .intro > .name > h1 {
+    padding-left: 55px;
+    padding-bottom: 20px;
+  }
+  .intro > div > p:first-child {
+    padding-bottom: 15px;
+  }
+  .skills {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    color: black;
+  }
+  .skills > div > h2 {
+    text-align: center;
+  }
+  .skills p {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .skills > div p a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .skills p a img {
+    transition: 1s ease;
+  }
+  .skills p a img:hover {
+    transform: scale(1.75);
+  }
+  .interests {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .interests ul {
+    padding-top: 15px;
+  }
+  .interests ul li {
+    color: black;
+    list-style: none;
+    padding: 7px;
+  }
+  .socialIconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .socialIconDiv > h3 {
+    padding: 10px;
+    display: block;
+  }
+  .socialIcons li {
+    height: 30px;
+    width: 30px;
+    list-style: none;
+    display: inline-block;
+    margin: 15px;
+  }
+  .socialIcons li a svg {
+    stroke: black;
+  }
+  .socialIcons li a svg:hover {
+    stroke: aqua;
+  }
+  .myEmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .myEmail a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.7s ease;
+  }
+  .myEmail a:hover {
+    color: aqua;
+    transform: scale(1.2);
   }
 }
+
 @media only screen and (min-width: 768px) {
   .parallax > div {
     position: relative;
-    padding-top: 13vw;
+    padding-top: 8vw;
     padding-left: 3vw;
   }
   .parallax > div > h1 {
     font-size: 5vw;
+    color: white;
   }
   .parallax > div > p {
     padding: 1vw;
     font-size: 2vw;
+    color: red;
   }
 }
-
 .parallax2 {
   background-image: url(images/flip.jpg);
   height: 70%;
@@ -254,7 +350,7 @@ html {
   background-attachment: fixed;
   filter: grayscale(1);
 }
-.skills {
+/*.skills {
   display: flex;
   justify-content: center;
   padding: 40px;
@@ -277,7 +373,7 @@ html {
 }
 .skills p a img:hover {
   transform: scale(1.75);
-}
+}*/
 /***********************************
 -------- Connection Columns --------
 ***********************************/
